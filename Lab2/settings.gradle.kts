@@ -19,9 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-<<<<<<< HEAD
-rootProject.name = "MyFirstApp"
-=======
-rootProject.name = "MCU114-13203-GROUP-13"
->>>>>>> 0769a801762a42194efcdf433aa2fc966efe81b6
+rootProject.name = "Lab2"
 include(":app")
+ 
