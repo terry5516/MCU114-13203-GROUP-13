@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="選擇主餐"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_main_meal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp">
+
+        <RadioButton
+            android:id="@+id/radio_beef"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="牛肉漢堡"
+            android:textSize="18sp"
+            android:padding="16dp" />
+
+        <RadioButton
+            android:id="@+id/radio_chicken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="雞肉漢堡"
+            android:textSize="18sp"
+            android:padding="16dp" />
+
+        <RadioButton
+            android:id="@+id/radio_fish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="魚排漢堡"
+            android:textSize="18sp"
+            android:padding="16dp" />
+
+        <RadioButton
+            android:id="@+id/radio_vegetarian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="素食漢堡"
+            android:textSize="18sp"
+            android:padding="16dp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_confirm_main_meal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="確認選擇"
+        android:textSize="18sp" />
+
+</LinearLayout>

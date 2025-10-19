@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歡迎使用點餐系統"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:id="@+id/btn_main_meal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="選擇主餐"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_side_dish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="選擇副餐"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_drink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="選擇飲料"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="確認訂單"
+        android:layout_marginBottom="32dp" />
+
+    <TextView
+        android:id="@+id/tv_order_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="當前訂單:\n主餐: 未選擇\n副餐: 未選擇\n飲料: 未選擇"
+        android:textSize="16sp"
+        android:background="#f0f0f0"
+        android:padding="16dp" />
+
+</LinearLayout>

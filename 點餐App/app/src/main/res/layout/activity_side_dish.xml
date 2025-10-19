@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="選擇副餐（可多選）"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp" />
+
+    <CheckBox
+        android:id="@+id/checkbox_fries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="薯條"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <CheckBox
+        android:id="@+id/checkbox_salad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="沙拉"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <CheckBox
+        android:id="@+id/checkbox_soup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="濃湯"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <CheckBox
+        android:id="@+id/checkbox_bread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="大蒜麵包"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/btn_confirm_side_dish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="確認選擇"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
