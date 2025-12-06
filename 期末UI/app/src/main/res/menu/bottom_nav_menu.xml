@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="首頁" />
+
+    <item
+        android:id="@+id/navigation_schedule"
+        android:icon="@drawable/ic_schedule"
+        android:title="行程" />
+
+    <item
+        android:id="@+id/navigation_todo"
+        android:icon="@drawable/ic_todo"
+        android:title="待辦" />
+
+    <item
+        android:id="@+id/navigation_feedback"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="反饋" />
+
+</menu>
