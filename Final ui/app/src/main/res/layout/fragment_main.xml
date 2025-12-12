@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAFAFA">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="首頁"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        tools:ignore="HardcodedText" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- ========== 首頁頁面 ========== -->
+        <LinearLayout
+            android:id="@+id/layout_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="visible"
+            android:background="#FFF3E0"
+            android:scrollbars="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="歡迎來到首頁"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:textColor="#FF5722"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp" />
+
+                    <TextView
+                        android:id="@+id/tv_login_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="目前狀態: 未登入"
+                        android:textSize="16sp"
+                        android:textColor="#FF5722"
+                        android:layout_marginBottom="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp">
+
+                        <Button
+                            android:id="@+id/btn_login"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="登入"
+                            android:backgroundTint="#2196F3"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginEnd="8dp"
+                            android:padding="12dp" />
+
+                        <Button
+                            android:id="@+id/btn_register"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="註冊"
+                            android:backgroundTint="#4CAF50"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginStart="8dp"
+                            android:padding="12dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_logged_in"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:background="@android:color/white"
+                        android:padding="16dp"
+                        android:layout_marginBottom="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="已登入用戶"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#4CAF50"
+                            android:layout_marginBottom="10dp" />
+
+                        <TextView
+                            android:id="@+id/tv_logged_in_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="用戶名稱: "
+                            android:textSize="16sp"
+                            android:textColor="#212121" />
+
+                        <TextView
+                            android:id="@+id/tv_logged_in_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="電子郵件: "
+                            android:textSize="16sp"
+                            android:textColor="#212121"
+                            android:layout_marginTop="5dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_date_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="載入中..."
+                        android:textSize="14sp"
+                        android:textColor="#757575"
+                        android:layout_marginBottom="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp">
+
+                        <Button
+                            android:id="@+id/btn_quick_action1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="更新時間"
+                            android:backgroundTint="#4CAF50"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginEnd="8dp" />
+
+                        <Button
+                            android:id="@+id/btn_quick_action2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="清空通知"
+                            android:backgroundTint="#F44336"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginStart="8dp" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="-40dp">
+
+                        <TextView
+                            android:id="@+id/notification_badge"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/notification_badge"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="快速任務"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#FF5722"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp" />
+
+                    <ListView
+                        android:id="@+id/list_quick_tasks"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@android:color/white"
+                        android:divider="@android:color/darker_gray"
+                        android:dividerHeight="1dp" />
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <!-- ========== 搜尋頁面 ========== -->
+        <LinearLayout
+            android:id="@+id/layout_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone"
+            android:background="#E3F2FD">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搜尋功能"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#2196F3"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp" />
+
+            <Spinner
+                android:id="@+id/sp_search_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="輸入搜尋關鍵字..."
+                android:padding="16dp"
+                android:background="@android:drawable/editbox_background"
+                android:layout_marginBottom="20dp" />
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="搜尋"
+                android:padding="16dp"
+                android:backgroundTint="#2196F3"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搜尋結果"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#1976D2"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/tv_search_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="還沒有搜尋結果"
+                android:textSize="16sp"
+                android:textColor="#616161"
+                android:padding="16dp"
+                android:background="@android:color/white"
+                android:minHeight="100dp"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搜尋歷史"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2196F3"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <ListView
+                android:id="@+id/list_search_history"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@android:color/white"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="1dp" />
+
+        </LinearLayout>
+
+        <!-- ========== 課表頁面 ========== -->
+        <LinearLayout
+            android:id="@+id/layout_favorites"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone"
+            android:background="#F0F4FF">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的課表"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#3F51B5"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/tv_schedule_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="載入中..."
+                android:textSize="16sp"
+                android:textColor="#3F51B5"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/tv_today_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今日課程"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FF5722"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:id="@+id/layout_today_courses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/schedule_background"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:id="@+id/tv_today_courses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="載入中..."
+                    android:textSize="16sp"
+                    android:textColor="#212121" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看其他天課表"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#3F51B5"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <Button
+                    android:id="@+id/btn_monday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="星期一"
+                    android:backgroundTint="#FF9800"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginEnd="4dp" />
+
+                <Button
+                    android:id="@+id/btn_tuesday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="星期二"
+                    android:backgroundTint="#2196F3"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp" />
+
+                <Button
+                    android:id="@+id/btn_wednesday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="星期三"
+                    android:backgroundTint="#4CAF50"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <Button
+                    android:id="@+id/btn_thursday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="星期四"
+                    android:backgroundTint="#9C27B0"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginEnd="4dp" />
+
+                <Button
+                    android:id="@+id/btn_friday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="星期五"
+                    android:backgroundTint="#FF5722"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp" />
+
+                <Button
+                    android:id="@+id/btn_saturday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="星期六"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginStart="4dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本週全部課程"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#3F51B5"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <ListView
+                android:id="@+id/list_full_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@android:color/white"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="1dp" />
+
+        </LinearLayout>
+
+        <!-- ========== 個人資料頁面 ========== -->
+        <LinearLayout
+            android:id="@+id/layout_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone"
+            android:background="#E8F5E9">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layout_user_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@android:color/white"
+                        android:padding="20dp"
+                        android:layout_marginBottom="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="用戶資訊"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="#4CAF50"
+                            android:layout_marginBottom="15dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="10dp">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="姓名:"
+                                android:textSize="16sp"
+                                android:textColor="#757575" />
+
+                            <TextView
+                                android:id="@+id/tv_profile_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="未登入"
+                                android:textSize="16sp"
+                                android:textColor="#212121" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="10dp">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="電子郵件:"
+                                android:textSize="16sp"
+                                android:textColor="#757575" />
+
+                            <TextView
+                                android:id="@+id/tv_profile_email"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="未登入"
+                                android:textSize="16sp"
+                                android:textColor="#212121" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="10dp">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="註冊時間:"
+                                android:textSize="16sp"
+                                android:textColor="#757575" />
+
+                            <TextView
+                                android:id="@+id/tv_profile_reg_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="未登入"
+                                android:textSize="16sp"
+                                android:textColor="#212121" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@android:color/white"
+                        android:padding="20dp"
+                        android:layout_marginBottom="20dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@android:drawable/ic_menu_my_calendar"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp" />
+
+                        <TextView
+                            android:id="@+id/tv_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="遊客"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="#212121"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="5dp" />
+
+                        <TextView
+                            android:id="@+id/tv_user_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="未登入"
+                            android:textSize="14sp"
+                            android:textColor="#757575"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="應用設定"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#388E3C"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:background="@android:color/white"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="深色模式"
+                            android:textSize="16sp"
+                            android:textColor="#212121"
+                            android:gravity="center_vertical" />
+
+                        <Switch
+                            android:id="@+id/switch_dark_mode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="應用設定"
+                        android:padding="16dp"
+                        android:backgroundTint="#4CAF50"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginBottom="10dp" />
+
+                    <Button
+                        android:id="@+id/btn_clear_cache"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="清除緩存"
+                        android:padding="16dp"
+                        android:backgroundTint="#FF9800"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginBottom="10dp" />
+
+                    <!-- ========== 意見回饋按鈕 ========== -->
+                    <Button
+                        android:id="@+id/btn_feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📝 意見回饋"
+                        android:padding="16dp"
+                        android:backgroundTint="#9C27B0"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginBottom="10dp" />
+
+                    <Button
+                        android:id="@+id/btn_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="關於應用"
+                        android:padding="16dp"
+                        android:backgroundTint="#607D8B"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginBottom="10dp" />
+
+                    <!-- ========== 清除回饋記錄按鈕 ========== -->
+                    <Button
+                        android:id="@+id/btn_clear_feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🗑️ 清除回饋記錄"
+                        android:padding="12dp"
+                        android:backgroundTint="#757575"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btn_logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="登出"
+                        android:padding="16dp"
+                        android:backgroundTint="#F44336"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

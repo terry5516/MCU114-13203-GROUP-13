@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme -->
+    <style name="Base.Theme.FINALUi" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- 自訂你的 light/dark 視覺 -->
+    </style>
+
+    <!-- App 主題 -->
+    <style name="Theme.FINALUi" parent="Base.Theme.FINALUi" />
+
+    <!-- ⭐ SplashActivity 專用：無 ActionBar、無 Title、全螢幕顯示 -->
+    <style name="Theme.FINALUi.Splash" parent="Theme.FINALUi">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+</resources>
