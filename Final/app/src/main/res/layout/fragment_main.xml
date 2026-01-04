@@ -89,7 +89,6 @@
                             android:textColor="#FFFFFF"
                             android:layout_marginStart="8dp"
                             android:padding="12dp" />
-
                     </LinearLayout>
 
                     <LinearLayout
@@ -127,7 +126,6 @@
                             android:textSize="16sp"
                             android:textColor="#212121"
                             android:layout_marginTop="5dp" />
-
                     </LinearLayout>
 
                     <TextView
@@ -164,7 +162,6 @@
                             android:backgroundTint="#F44336"
                             android:textColor="#FFFFFF"
                             android:layout_marginStart="8dp" />
-
                     </LinearLayout>
 
                     <RelativeLayout
@@ -184,7 +181,6 @@
                             android:textColor="#FFFFFF"
                             android:textSize="12sp"
                             android:visibility="visible" />
-
                     </RelativeLayout>
 
                     <TextView
@@ -204,10 +200,8 @@
                         android:background="@android:color/white"
                         android:divider="@android:color/darker_gray"
                         android:dividerHeight="1dp" />
-
                 </LinearLayout>
             </ScrollView>
-
         </LinearLayout>
 
         <!-- ========== 搜尋頁面 ========== -->
@@ -230,6 +224,31 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="30dp" />
 
+            <Button
+                android:id="@+id/btn_school_website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="學校網站"
+                android:padding="16dp"
+                android:backgroundTint="#3F51B5"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="10dp" />
+
+            <!-- 添加一個容器給 WebView -->
+            <FrameLayout
+                android:id="@+id/webview_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <!-- 可以在這裡直接放一個 WebView，或者動態添加 -->
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
             <Spinner
                 android:id="@+id/sp_search_category"
                 android:layout_width="match_parent"
@@ -244,6 +263,8 @@
                 android:padding="16dp"
                 android:background="@android:drawable/editbox_background"
                 android:layout_marginBottom="20dp" />
+
+
 
             <Button
                 android:id="@+id/btn_search"
@@ -294,7 +315,6 @@
                 android:background="@android:color/white"
                 android:divider="@android:color/darker_gray"
                 android:dividerHeight="1dp" />
-
         </LinearLayout>
 
         <!-- ========== 課表頁面 ========== -->
@@ -352,7 +372,6 @@
                     android:text="載入中..."
                     android:textSize="16sp"
                     android:textColor="#212121" />
-
             </LinearLayout>
 
             <TextView
@@ -401,7 +420,6 @@
                     android:textColor="#FFFFFF"
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="4dp" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -440,7 +458,6 @@
                     android:backgroundTint="#607D8B"
                     android:textColor="#FFFFFF"
                     android:layout_marginStart="4dp" />
-
             </LinearLayout>
 
             <TextView
@@ -460,7 +477,6 @@
                 android:background="@android:color/white"
                 android:divider="@android:color/darker_gray"
                 android:dividerHeight="1dp" />
-
         </LinearLayout>
 
         <!-- ========== 個人資料頁面 ========== -->
@@ -521,7 +537,6 @@
                                 android:text="未登入"
                                 android:textSize="16sp"
                                 android:textColor="#212121" />
-
                         </LinearLayout>
 
                         <LinearLayout
@@ -545,7 +560,6 @@
                                 android:text="未登入"
                                 android:textSize="16sp"
                                 android:textColor="#212121" />
-
                         </LinearLayout>
 
                         <LinearLayout
@@ -569,9 +583,7 @@
                                 android:text="未登入"
                                 android:textSize="16sp"
                                 android:textColor="#212121" />
-
                         </LinearLayout>
-
                     </LinearLayout>
 
                     <LinearLayout
@@ -609,7 +621,6 @@
                             android:textColor="#757575"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginBottom="20dp" />
-
                     </LinearLayout>
 
                     <TextView
@@ -643,7 +654,6 @@
                             android:id="@+id/switch_dark_mode"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
-
                     </LinearLayout>
 
                     <Button
@@ -707,12 +717,8 @@
                         android:padding="16dp"
                         android:backgroundTint="#F44336"
                         android:textColor="#FFFFFF" />
-
                 </LinearLayout>
             </ScrollView>
-
         </LinearLayout>
-
     </FrameLayout>
-
 </LinearLayout>
